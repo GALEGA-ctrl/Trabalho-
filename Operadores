@@ -1,0 +1,103 @@
+// 1. Soma de 25 e 17
+let soma = 25 + 17; // 42
+
+// 2. Subtrai 100 de 250
+let subtracao = 250 - 100; // 150
+
+// 3. Multiplica 9 por 6
+let multiplicacao = 9 * 6; // 54
+
+// 4. Divide 144 por 12
+let divisao = 144 / 12; // 12
+
+// 5. Resto da divisão entre 55 e 6
+let resto = 55 % 6; // 1
+
+// 6. Incrementa variável x
+let x = 10;
+x++; // 11
+
+// 7. Decrementa variável y duas vezes
+let y = 5;
+y--; // 4
+y--; // 3
+
+// 8. (10 + 5 - 3) * 2
+let conta = (10 + 5 - 3) * 2; // 24
+
+// 9. Média de 8, 7.5 e 10
+let media = (8 + 7.5 + 10) / 3; // 8.5
+
+// 10. Operações compostas com a e b
+let a = 20;
+let b = 5;
+a += b; // a = 25
+a *= 2; // a = 50
+
+// 11. 10 > 7 ?
+let maior = 10 > 7; // true
+
+// 12. 5 <= 3 ?
+let menorIgual = 5 <= 3; // false
+
+// 13. 7 == '7' e 7 === '7'
+let igual1 = 7 == '7'; // true (valor igual)
+let igual2 = 7 === '7'; // false (tipo diferente)
+
+// 14. 10 !== '10' e 10 != '10'
+let diferente1 = 10 !== '10'; // true (valor igual, tipo diferente)
+let diferente2 = 10 != '10'; // false (valor igual)
+
+// 15. (5 > 3) && (8 < 10)
+let eLogico = (5 > 3) && (8 < 10); // true
+
+// 16. (5 < 3) || (8 === 8)
+let ouLogico = (5 < 3) || (8 === 8); // true
+
+// 17. !(7 > 2)
+let negacao = !(7 > 2); // false
+
+// 18. (4 + 3) * 2 vs 4 + 3 * 2
+let parênteses = (4 + 3) * 2; // 14
+let semParênteses = 4 + 3 * 2; // 10
+
+// 19. 2 ** 4
+let potencia = 2 ** 4; // 16
+
+// 20. ((10 + 2) / 2) ** 2
+let expressao = ((10 + 2) / 2) ** 2; // 36
+
+// 21. 4 + 4 == 2 * 4
+let compara = (4 + 4) == (2 * 4); // true
+
+// 22. Expressão com ==, !, &&
+let expressaoFalse = (5 == 5) && !(2 == 2) && (3 == 3); // false (porque !(2 == 2) é false)
+
+// 23. Expressão com ||, !==, números, retorna true
+let expressaoTrue = (5 !== '5') || (2 !== 2) || (3 !== 4) || (1 !== 0); // true
+
+// 24. 5 + 3 * 2 ** 2
+let ordem = 5 + 3 * 2 ** 2; // 5 + 3 * 4 = 5 + 12 = 17
+
+// 25. r = 3; r += 2 * 4; depois r /= 2
+let r = 3;
+r += 2 * 4; // r = 3 + 8 = 11
+r /= 2; // r = 5.5
+
+// 26. Concatenar strings
+let nome = "Ana";
+let sobrenome = "Silva";
+let nomeCompleto = nome + " " + sobrenome; // "Ana Silva"
+
+// 27. ("5" + 5) == 55
+let testeString = ("5" + 5) == 55; // true, pois "5" + 5 = "55" (concatenação)
+
+// 28. true && false || true
+let testeBool = true && false || true; // true
+
+// 29. Expressão que combine tudo e resulte em true
+let misto = (5 + 5 > 9) && (2 * 2 == 4) || false; // true
+
+// 30. let resultado = (10 + 5 * 2) > (30 / 2) && !false;
+// (10 + 10) > 15 && true => 20 > 15 && true => true && true => true
+let resultado = (10 + 5 * 2) > (30 / 2) && !false; // true
