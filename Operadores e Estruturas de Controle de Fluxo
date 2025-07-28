@@ -1,0 +1,235 @@
+# Exercício 1: Determinar se um número é par ou ímpar
+numero = int(input("Digite um número: "))
+
+if numero % 2 == 0:
+    print(f"O número {numero} é par.")
+else:
+    print(f"O número {numero} é ímpar.")
+
+# Exercício 2: Encontrar o maior de três números
+num1 = float(input("Digite o primeiro número: "))
+num2 = float(input("Digite o segundo número: "))
+num3 = float(input("Digite o terceiro número: "))
+
+maior = max(num1, num2, num3)
+print(f"O maior número é: {maior}")
+
+# Exercício 3: Calcular média e verificar aprovação/reprovação
+nota1 = float(input("Digite a primeira nota: "))
+nota2 = float(input("Digite a segunda nota: "))
+nota3 = float(input("Digite a terceira nota: "))
+
+media = (nota1 + nota2 + nota3) / 3
+
+if media >= 7:
+    print(f"Média: {media:.2f}. Aluno APROVADO!")
+else:
+    print(f"Média: {media:.2f}. Aluno REPROVADO!")
+
+# Exercício 4: Verificar se a pessoa é maior de idade
+from datetime import datetime
+
+ano_nascimento = int(input("Digite o ano de nascimento: "))
+ano_atual = datetime.now().year
+idade = ano_atual - ano_nascimento
+
+if idade >= 18:
+    print(f"Você tem {idade} anos. É maior de idade.")
+else:
+    print(f"Você tem {idade} anos. Não é maior de idade.")
+
+# Exercício 5: Conversão de temperatura
+def celsius_para_fahrenheit(celsius):
+    return (celsius * 9/5) + 32
+
+def fahrenheit_para_celsius(fahrenheit):
+    return (fahrenheit - 32) * 5/9
+
+escolha = input("Escolha a conversão (C para F ou F para C): ").upper()
+
+if escolha == 'C':
+    celsius = float(input("Digite a temperatura em Celsius: "))
+    fahrenheit = celsius_para_fahrenheit(celsius)
+    print(f"{celsius}°C equivale a {fahrenheit:.2f}°F")
+elif escolha == 'F':
+    fahrenheit = float(input("Digite a temperatura em Fahrenheit: "))
+    celsius = fahrenheit_para_celsius(fahrenheit)
+    print(f"{fahrenheit}°F equivale a {celsius:.2f}°C")
+else:
+    print("Escolha inválida. Use 'C' ou 'F'.")
+
+# Exercício 6: Verificar se um número é múltiplo do outro
+num1 = int(input("Digite o primeiro número: "))
+num2 = int(input("Digite o segundo número: "))
+
+if num1 % num2 == 0 or num2 % num1 == 0:
+    print("Pelo menos um dos números é múltiplo do outro.")
+else:
+    print("Nenhum dos números é múltiplo do outro.")
+
+# Exercício 7: Classificar um triângulo
+lado1 = float(input("Digite o primeiro lado do triângulo: "))
+lado2 = float(input("Digite o segundo lado do triângulo: "))
+lado3 = float(input("Digite o terceiro lado do triângulo: "))
+
+# Verificar se é um triângulo válido
+if lado1 + lado2 > lado3 and lado2 + lado3 > lado1 and lado1 + lado3 > lado2:
+    if lado1 == lado2 == lado3:
+        print("O triângulo é equilátero.")
+    elif lado1 == lado2 or lado2 == lado3 or lado1 == lado3:
+        print("O triângulo é isósceles.")
+    else:
+        print("O triângulo é escaleno.")
+else:
+    print("Os valores informados não formam um triângulo válido.")
+
+# Exercício 8: Simular um restaurante com switch (usando if-elif)
+prato = input("Escolha um prato do menu (pizza, hambúrguer, salada, macarrão): ").lower()
+
+if prato == "pizza":
+    print("Pizza - R$ 30.00")
+    print("Descrição: Pizza saborosa com ingredientes frescos.")
+elif prato == "hambúrguer":
+    print("Hambúrguer - R$ 25.00")
+    print("Descrição: Hambúrguer artesanal com picles e queijo derretido.")
+elif prato == "salada":
+    print("Salada - R$ 15.00")
+    print("Descrição: Salada fresca com legumes orgânicos.")
+elif prato == "macarrão":
+    print("Macarrão - R$ 20.00")
+    print("Descrição: Macarrão à bolonhesa com molho caseiro.")
+else:
+    print("Prato não encontrado no menu.")
+
+# Exercício 9: Calcular IMC e classificar
+peso = float(input("Digite seu peso em kg: "))
+altura = float(input("Digite sua altura em metros: "))
+
+imc = peso / (altura ** 2)
+
+if imc < 18.5:
+    classificacao = "Abaixo do peso"
+elif 18.5 <= imc < 24.9:
+    classificacao = "Peso normal"
+elif 25 <= imc < 29.9:
+    classificacao = "Sobrepeso"
+else:
+    classificacao = "Obesidade"
+
+print(f"Seu IMC é {imc:.2f}. Classificação: {classificacao}")
+
+# Exercício 10: Números pares com while
+numero = int(input("Digite um número positivo: "))
+
+if numero < 0:
+    print("Por favor, digite um número positivo.")
+else:
+    i = 0
+    while i <= numero:
+        if i % 2 == 0:
+            print(i)
+        i += 1
+
+# Exercício 11: Números ímpares com for
+numero = int(input("Digite um número positivo: "))
+
+if numero < 0:
+    print("Por favor, digite um número positivo.")
+else:
+    for i in range(0, numero + 1):
+        if i % 2 != 0:
+            print(i)
+
+# Exercício 12: Calcular fatorial
+def fatorial(n):
+    if n == 0 or n == 1:
+        return 1
+    else:
+        resultado = 1
+        for i in range(2, n + 1):
+            resultado *= i
+        return resultado
+
+numero = int(input("Digite um número para calcular o fatorial: "))
+
+if numero < 0:
+    print("O fatorial não está definido para números negativos.")
+else:
+    print(f"O fatorial de {numero} é {fatorial(numero)}")
+
+// Exercício 13: Jogo de adivinhação
+
+// Gera um número aleatório entre 1 e 100
+const numeroSecreto = Math.floor(Math.random() * 100) + 1;
+
+// Número máximo de tentativas
+const MAX_TENTATIVAS = 10;
+
+console.log("Bem-vindo ao jogo de adivinhação!");
+console.log(`Tente adivinhar o número secreto entre 1 e 100. Você tem ${MAX_TENTATIVAS} tentativas.`);
+
+let tentativas = 0;
+let acertou = false;
+
+while (tentativas < MAX_TENTATIVAS && !acertou) {
+    // Solicita o palpite do usuário
+    const palpite = parseInt(prompt("Digite o seu palpite: "));
+
+    // Verifica se o palpite é válido
+    if (isNaN(palpite)) {
+        console.log("Por favor, digite um número válido.");
+        continue;
+    }
+
+    tentativas++;
+
+    // Verifica se o palpite está correto
+    if (palpite === numeroSecreto) {
+        console.log(`Parabéns! Você acertou o número secreto em ${tentativas} tentativas.`);
+        acertou = true;
+    } else if (palpite < numeroSecreto) {
+        console.log("O número secreto é maior. Tente novamente!");
+    } else {
+        console.log("O número secreto é menor. Tente novamente!");
+    }
+
+    // Informa quantas tentativas restam
+    if (!acertou && tentativas < MAX_TENTATIVAS) {
+        console.log(`Você ainda tem ${MAX_TENTATIVAS - tentativas} tentativas restantes.`);
+    }
+}
+
+// Caso o usuário não acerte em 10 tentativas
+if (!acertou) {
+    console.log(`Suas tentativas acabaram. O número secreto era ${numeroSecreto}.`);
+}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Jogo de Adivinhação</title>
+</head>
+<body>
+    <script>
+        // Código JavaScript aqui
+        // ...
+    </script>
+</body>
+</html>
+
+Bem-vindo ao jogo de adivinhação!
+Tente adivinhar o número secreto entre 1 e 100. Você tem 10 tentativas.
+Digite o seu palpite: 50
+O número secreto é maior. Tente novamente!
+Você ainda tem 9 tentativas restantes.
+Digite o seu palpite: 75
+O número secreto é menor. Tente novamente!
+Você ainda tem 8 tentativas restantes.
+Digite o seu palpite: 65
+Parabéns! Você acertou o número secreto em 3 tentativas.
+
+Bem-vindo ao jogo de adivinhação!
+Tente adivinhar o número secreto entre 1 e 100. Você tem 10 tentativas.
+...
+Suas tentativas acabaram. O número secreto era 42.
